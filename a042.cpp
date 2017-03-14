@@ -1,17 +1,18 @@
 #include <iostream>
 #include <math.h>
-int main(){
+int main()
+{
 	int N;
 	std::cin >> N;
-	
-	int p = pow(13,N);
-	int digit = log(p) + 1;
+	int n;
+	long long int p=13,tendigit;
+	int i;
 
-	int ndigit;
-	for(int i=0;i<digit-2;i++)
+	for(i=0;i<N;i++)
 	{
-		ndigit = p%100;
-		ndigit = ndigit/10;
+		p*=p;
 	}
-	std::cout << ndigit <<std::endl;
+	tendigit = p%100;
+	tendigit = tendigit/10;
+	std::cout << tendigit << std::endl;
 }
